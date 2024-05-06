@@ -14,6 +14,7 @@ private struct Constant {
 
 /// `RushingForwardTargetNotchPolicy` specifies a policy that will always move forward if a
 /// minimum velocity has been reached.
+@MainActor
 public class RushingForwardTargetNotchPolicy: OverlayTranslationTargetNotchPolicy {
 
     /// The minimum velocity to reach to move forward. The default value is 400 pt/s.

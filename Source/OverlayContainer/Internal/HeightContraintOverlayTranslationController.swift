@@ -19,6 +19,7 @@ private struct TranslationMetaData {
     let type: TranslationType
 }
 
+@MainActor
 protocol HeightConstraintOverlayTranslationControllerDelegate: AnyObject {
     func overlayViewController(for translationController: OverlayTranslationController) -> UIViewController?
 
@@ -36,6 +37,7 @@ protocol HeightConstraintOverlayTranslationControllerDelegate: AnyObject {
     func translationControllerDidScheduleTranslations(_ translationController: OverlayTranslationController)
 }
 
+@MainActor
 class HeightConstraintOverlayTranslationController: OverlayTranslationController {
 
     weak var delegate: HeightConstraintOverlayTranslationControllerDelegate?

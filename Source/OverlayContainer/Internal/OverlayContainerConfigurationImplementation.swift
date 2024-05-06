@@ -7,6 +7,7 @@
 
 import UIKit
 
+@MainActor
 class OverlayContainerConfigurationImplementation: OverlayContainerConfigurationInvalidating {
 
     private weak var overlayContainerViewController: OverlayContainerViewController?

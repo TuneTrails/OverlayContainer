@@ -8,6 +8,7 @@
 
 import UIKit
 
+@MainActor
 protocol ActionViewControllerDelegate: AnyObject {
     func actionViewControllerDidSelectionAction()
 }

@@ -18,6 +18,7 @@ private struct Constant {
 }
 
 /// An `OverlayAnimatedTransitioning` implementation based on `UISpringTimingParameters`.
+@MainActor
 public class SpringOverlayTranslationAnimationController: OverlayAnimatedTransitioning {
 
     public var mass: CGFloat = Constant.defaultMass

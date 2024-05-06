@@ -9,6 +9,7 @@ import UIKit
 
 /// `RubberBandOverlayTranslationFunction` specifies an overlay that will move linearly between
 /// the translation boundaris and limit its progression once reached.
+@MainActor
 public class RubberBandOverlayTranslationFunction: OverlayTranslationFunction {
 
     /// A factor defining how much the translation should be limited once one of the boundaries is reached.

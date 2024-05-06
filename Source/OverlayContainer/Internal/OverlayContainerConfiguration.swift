@@ -7,6 +7,7 @@
 
 import UIKit
 
+@MainActor
 protocol OverlayContainerConfiguration {
 
     func numberOfNotches() -> Int
@@ -25,6 +26,7 @@ protocol OverlayContainerConfiguration {
                                     for overlayViewController: UIViewController) -> OverlayTranslationFunction
 }
 
+@MainActor
 protocol OverlayContainerConfigurationInvalidating: OverlayContainerConfiguration {
     func invalidateOverlayMetrics()
     func requestOverlayMetricsIfNeeded()

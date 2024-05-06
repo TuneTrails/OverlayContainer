@@ -9,6 +9,7 @@ import UIKit
 
 /// A protocol that provides information about an in-progress translation.
 /// Do not adopt this protocol in your own classes. Use the one provided by the `OverlayTranslationFunction`.
+@MainActor
 public protocol OverlayTranslationParameters {
     /// The mininum translation height
     var minimumHeight: CGFloat { get }
@@ -23,6 +24,7 @@ public protocol OverlayTranslationParameters {
 ///
 /// Adopt this protocol to tweak the native translation behavior. You can also use the provided
 /// implementations like `RubberBandOverlayTranslationFunction`.
+@MainActor
 public protocol OverlayTranslationFunction {
     /// Returns the expected translation based on the specified parameters.
     func overlayTranslationHeight(using parameters: OverlayTranslationParameters) -> CGFloat

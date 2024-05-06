@@ -9,6 +9,7 @@ import UIKit
 
 private typealias Completion = (OverlayContainerTransitionCoordinatorContext) -> Void
 
+@MainActor
 class DraggingOverlayContainerTransitionCoordinator: OverlayContainerTransitionCoordinator {
 
     private let context: OverlayContainerTransitionCoordinatorContext

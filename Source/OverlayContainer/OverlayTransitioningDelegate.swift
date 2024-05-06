@@ -10,6 +10,7 @@ import UIKit
 /// A protocol that provides contextual information on the current overlay translation.
 ///
 /// Do not adopt this protocol in your own classes, use the one provided in `OverlayTranslationTargetNotchPolicy`.
+@MainActor
 public protocol OverlayContainerContextTargetNotchPolicy: OverlayContainerTransitionContext {
     /// The manipulated child view controller.
     var overlayViewController: UIViewController { get }
@@ -18,6 +19,7 @@ public protocol OverlayContainerContextTargetNotchPolicy: OverlayContainerTransi
 /// A protocol that provides contextual information on the current overlay translation.
 ///
 /// Do not adopt this protocol in your own classes, use the one provided in `OverlayAnimatedTransitioning`.
+@MainActor
 public protocol OverlayContainerContextTransitioning: OverlayContainerTransitionContext {
     /// The manipulated child view controller.
     var overlayViewController: UIViewController { get }
@@ -30,6 +32,7 @@ public protocol OverlayContainerContextTransitioning: OverlayContainerTransition
 /// A protocol that manages the container behavior once the user finishes dragging.
 ///
 /// Adopt this protocol to provide your own translation behavior.
+@MainActor
 public protocol OverlayTransitioningDelegate: AnyObject {
     /// Returns the target notch policy for the specified child view controller.
     func overlayTargetNotchPolicy(for overlayViewController: UIViewController) -> OverlayTranslationTargetNotchPolicy?
@@ -41,6 +44,7 @@ public protocol OverlayTransitioningDelegate: AnyObject {
 ///
 /// Adopt this protocol to provide your own policy. You can also use the provided
 /// implementations like `RushingForwardTargetNotchPolicy`.
+@MainActor
 public protocol OverlayTranslationTargetNotchPolicy {
     /// Returns the expected notch index based on the specified context.
     func targetNotchIndex(using context: OverlayContainerContextTargetNotchPolicy) -> Int
@@ -50,6 +54,7 @@ public protocol OverlayTranslationTargetNotchPolicy {
 ///
 /// Adopt this protocol to perform your own translation animations. You can also use the provided
 /// implementations like `SpringOverlayTranslationAnimationController`.
+@MainActor
 public protocol OverlayAnimatedTransitioning {
     /// Returns the animator that will animate the end of the translation.
     func interruptibleAnimator(using context: OverlayContainerContextTransitioning) -> UIViewImplicitlyAnimating

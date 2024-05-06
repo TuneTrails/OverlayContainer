@@ -8,6 +8,7 @@
 
 import UIKit
 
+@MainActor
 protocol SearchViewControllerDelegate: AnyObject {
     func searchViewControllerDidSelectARow(_ searchViewController: SearchViewController)
     func searchViewControllerDidSelectCloseAction(_ searchViewController: SearchViewController)

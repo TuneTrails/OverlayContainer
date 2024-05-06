@@ -9,12 +9,14 @@
 import UIKit
 
 /// A protocol that provides contextual information on the drag-to-dismiss gesture state.
+@MainActor
 public protocol OverlayContainerSheetDismissalPolicyContext: OverlayContainerTransitionContext {
     /// The expected translation height once the animation ended.
     var targetTranslationHeight: CGFloat { get }
 }
 
 /// A protocol that defines the dismissal policy associated to an overlay container sheet controller.
+@MainActor
 public protocol OverlayContainerSheetDismissalPolicy {
     /// Asks the policy if the presented view controller should be dismissed when a drag-to-dismiss gesture happens.
     ///
@@ -25,6 +27,7 @@ public protocol OverlayContainerSheetDismissalPolicy {
 }
 
 /// The policy used by the sheet presentation controller by default.
+@MainActor
 public struct ThresholdOverlayContainerSheetDismissalPolicy: OverlayContainerSheetDismissalPolicy {
 
     /// `Position` defines a position that can dismiss the overlay container.

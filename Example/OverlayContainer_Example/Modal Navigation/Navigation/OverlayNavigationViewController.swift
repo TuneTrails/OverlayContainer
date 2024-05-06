@@ -8,12 +8,14 @@
 
 import UIKit
 
+@MainActor
 protocol OverlayNavigationViewControllerDelegate: AnyObject {
     func overlayNavigationViewController(_ navigationController: OverlayNavigationViewController,
                                          didShow viewController: UIViewController,
                                          animated: Bool)
 }
 
+@MainActor
 class OverlayNavigationViewController: UIViewController {
 
     weak var delegate: OverlayNavigationViewControllerDelegate?

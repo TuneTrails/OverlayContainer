@@ -8,6 +8,7 @@
 import UIKit
 
 /// The container delegate is responsible for defining the aspect and the behavior of the container.
+@MainActor
 public protocol OverlayContainerViewControllerDelegate: AnyObject {
 
     /// Asks the delegate for the number of notches in the container.

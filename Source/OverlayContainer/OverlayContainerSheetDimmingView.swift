@@ -9,6 +9,7 @@
 import UIKit
 
 /// An interface that enables a view to coordinate its appearance change alongside the container presentation animations and the presented overlay translations.
+@MainActor
 public protocol OverlayContainerSheetDimmingView: UIView {
     /// Notifies the view that the presentation animations are about to start.
     func presentationTransitionWillBegin()
@@ -34,6 +35,7 @@ public extension OverlayContainerSheetDimmingView {
 
 /// An `OverlayContainerSheetDimmingView` class that coordinates its alpha value alongside the container presentation animations
 /// and the presented overlay translations.
+@MainActor
 open class TransparentOverlayContainerSheetDimmingView: UIView, OverlayContainerSheetDimmingView {
 
     /// The view alpha when the container is dismissed.
@@ -45,7 +47,7 @@ open class TransparentOverlayContainerSheetDimmingView: UIView, OverlayContainer
 
     // MARK: - Life Cycle
 
-    public override init(frame: CGRect) {
+    public override init(frame: CGRect = .zero) {
         super.init(frame: frame)
         setUp()
     }

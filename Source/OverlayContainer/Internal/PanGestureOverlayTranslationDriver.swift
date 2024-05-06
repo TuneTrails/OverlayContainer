@@ -7,6 +7,7 @@
 
 import UIKit
 
+@MainActor
 class PanGestureOverlayTranslationDriver: NSObject,
                                           OverlayTranslationDriver,
                                           UIGestureRecognizerDelegate {

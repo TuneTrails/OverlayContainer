@@ -10,6 +10,7 @@ import UIKit
 /// A view which removes itself from the responder chain.
 ///
 /// Use `PassThroughView` whenever you need to provide a backdrop view to an `OverlayContainerViewController`.
+@MainActor
 open class PassThroughView: UIView {
 
     // MARK: - UIView

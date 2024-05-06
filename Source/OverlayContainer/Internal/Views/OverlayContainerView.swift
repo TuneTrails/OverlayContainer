@@ -7,4 +7,5 @@
 
 import UIKit
 
+@MainActor
 class OverlayContainerView: PassThroughView {}

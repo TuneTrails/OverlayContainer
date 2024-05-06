@@ -14,6 +14,7 @@ import UIKit
 /// It also includes two dismissal gestures: tap-to-dismiss and drag-to-dismiss.
 ///
 /// You can subclass this class if you need an extra level of customization.
+@MainActor
 open class OverlayContainerSheetPresentationController: OverlayContainerPresentationController {
 
     // MARK: - Public properties
@@ -44,10 +45,10 @@ open class OverlayContainerSheetPresentationController: OverlayContainerPresenta
     /// - returns: The new `OverlayContainerPresentationController` instance.
     ///
     /// The `presentedViewController` can be an overlay container or the parent view controller of an overlay container.
-    public init(dimmingView: OverlayContainerSheetDimmingView? = TransparentOverlayContainerSheetDimmingView(),
+    public init(dimmingView: OverlayContainerSheetDimmingView? = nil,
                 presentedViewController: UIViewController,
                 presenting: UIViewController?) {
-        self.dimmingView = dimmingView
+        self.dimmingView = dimmingView ?? TransparentOverlayContainerSheetDimmingView()
         super.init(
             presentedViewController: presentedViewController,
             presenting: presenting

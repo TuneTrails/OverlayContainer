@@ -7,6 +7,7 @@
 
 import UIKit
 
+@MainActor
 class OverlayTranslationGestureRecognizer: UIPanGestureRecognizer {
 
     weak var drivingScrollView: UIScrollView?

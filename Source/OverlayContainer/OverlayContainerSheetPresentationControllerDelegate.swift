@@ -9,6 +9,7 @@
 import UIKit
 
 /// The presentation controller delegate is responsible for defining the aspect and the behavior of the controller.
+@MainActor
 public protocol OverlayContainerSheetPresentationControllerDelegate: AnyObject {
 
     /// Asks the delegate for the dismissal policy associated to the specified presentation controller.

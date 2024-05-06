@@ -14,6 +14,7 @@ import UIKit
 ///
 /// This class is meant to be subclassed. Before you consider subclassing, though, you should look at
 /// the `OverlayContainerSheetPresentationController` class to see if it can be adapted to your presentation behavior.
+@MainActor
 open class OverlayContainerPresentationController: UIPresentationController {
 
     // MARK: - Internal

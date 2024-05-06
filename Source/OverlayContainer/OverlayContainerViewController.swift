@@ -15,6 +15,7 @@ import UIKit
 ///
 /// OverlayContainer uses the last view controller of its viewControllers as the overlay view controller.
 /// It stacks the other view controllers on top of each other, if any, and adds them underneath the overlay view controller.
+@MainActor
 open class OverlayContainerViewController: UIViewController {
 
     /// `OverlayStyle` defines how the overlay view controller will be constrained in the container.

@@ -7,6 +7,7 @@
 
 import UIKit
 
+@MainActor
 class InterruptibleAnimatorOverlayContainerTransitionCoordinator: OverlayContainerTransitionCoordinator {
 
     private let animator: UIViewImplicitlyAnimating

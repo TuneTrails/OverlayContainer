@@ -7,6 +7,7 @@
 
 import UIKit
 
+@MainActor
 class ScrollViewOverlayTranslationDriver: OverlayTranslationDriver, OverlayScrollViewDelegate {
 
     weak var translationController: OverlayTranslationController?

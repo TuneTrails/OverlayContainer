@@ -8,6 +8,7 @@
 import UIKit
 
 /// A protocol that provides information about the current overlay translation.
+@MainActor
 public protocol OverlayContainerTransitionContext {
     /// A Boolean value that indicates whether the user is currently dragging the overlay.
     var isDragging: Bool { get }
@@ -45,6 +46,7 @@ public extension OverlayContainerTransitionContext {
 
 /// A protocol that provides information about an in-progress translation.
 /// Do not adopt this protocol in your own classes. Use the one provided by the `OverlayContainerTransitionCoordinator`.
+@MainActor
 public protocol OverlayContainerTransitionCoordinatorContext: OverlayContainerTransitionContext {
     /// A Boolean value indicating whether the transition is explicitly animated.
     var isAnimated: Bool { get }
@@ -58,6 +60,7 @@ public protocol OverlayContainerTransitionCoordinatorContext: OverlayContainerTr
 ///
 /// Do not adopt this procotol in your own classes. Use the one provided by the `OverlayContainerDelegate` to
 /// add any extra animations alongside the translation animations.
+@MainActor
 public protocol OverlayContainerTransitionCoordinator: OverlayContainerTransitionCoordinatorContext {
     /// Runs the specified animations at the same time as overlay translation end animations.
     func animate(alongsideTransition animation: ((OverlayContainerTransitionCoordinatorContext) -> Void)?,
